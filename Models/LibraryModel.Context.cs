@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.Models
+namespace LibraryWebApp.Models
 {
     using System;
     using System.Data.Entity;

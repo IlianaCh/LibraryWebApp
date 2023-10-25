@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="libappdevModel.checkout_records" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="libappdevModel.equipment" Width="1.5" PointX="7.5" PointY="13.375" IsExpanded="true" />
         <EntityTypeShape EntityType="libappdevModel.fee" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="libappdevModel.movie" Width="1.5" PointX="7.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.movie" Width="1.5" PointX="7.25" PointY="18.625" IsExpanded="true" />
         <EntityTypeShape EntityType="libappdevModel.user_role" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="libappdevModel.user" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="libappdevModel.waitlist" Width="1.5" PointX="9.75" PointY="13.25" IsExpanded="true" />
