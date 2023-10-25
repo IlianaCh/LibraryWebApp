@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac073a89384443388b39ce4726342a60" Name="Diagram1">
+        <EntityTypeShape EntityType="libappdevModel.audio" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.book" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.checkout_records" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.equipment" Width="1.5" PointX="7.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.fee" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.movie" Width="1.5" PointX="7.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.user_role" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.user" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libappdevModel.waitlist" Width="1.5" PointX="9.75" PointY="13.25" IsExpanded="true" />
+        <AssociationConnector Association="libappdevModel.FK__audio__last_tran__0A688BB1" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__checkout___objec__0697FACD" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__662B2B3B" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__671F4F74" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__book__last_trans__01D345B0" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__checkout___objec__0C50D423" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__6BE40491" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__6CD828CA" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__checkout___objec__03BB8E22" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__checkout___objec__0880433F" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__checkout___user___09746778" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__equipment__last___02C769E9" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__equipment__last___05A3D694" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__equipment__last___0B5CAFEA" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__equipment__last___0D44F85C" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__transactio__13F1F5EB" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__transactio__14E61A24" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__transactio__15DA3E5D" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__transactio__16CE6296" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__movie__last_tran__0E391C95" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__76619304" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__user_id__1209AD79" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__user_id__12FDD1B2" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__user_id__17C286CF" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__fees__user_id__18B6AB08" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__7A3223E8" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__object__7C1A6C5A" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__users__user_role__56E8E7AB" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__users__user_role__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__users__user_role__5CA1C101" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__users__user_role__5D95E53A" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__57DD0BE4" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__5E8A0973" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__5F7E2DAC" ManuallyRouted="false" />
+        <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__607251E5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
