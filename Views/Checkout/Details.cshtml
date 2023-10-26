@@ -1,0 +1,90 @@
+﻿@model LibraryWebApp.Models.checkout_records
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>checkout_records</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.create_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.create_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.return_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.return_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.due_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.due_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_late)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_late)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.audio.audio_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.audio.audio_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.book.book_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.book.book_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie.movie_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie.movie_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipment.equip_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipment.equip_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.transaction_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

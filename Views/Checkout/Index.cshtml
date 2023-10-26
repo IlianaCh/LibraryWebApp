@@ -1,0 +1,81 @@
+﻿@model IEnumerable<LibraryWebApp.Models.checkout_records>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.create_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.return_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.due_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_late)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.audio.audio_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.book.book_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie.movie_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipment.equip_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.create_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.return_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.due_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_late)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio.audio_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.book.book_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie.movie_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipment.equip_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.user.username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.transaction_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.transaction_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.transaction_id })
+        </td>
+    </tr>
+}
+
+</table>

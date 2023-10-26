@@ -129,14 +129,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AudiosController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\EquipmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\CustomAuthenticationFilter.cs" />
+    <Compile Include="Infrastructure\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\audio.cs">
       <DependentUpon>LibraryModel.tt</DependentUpon>
     </Compile>
@@ -254,6 +258,15 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\UnAuthorized.cshtml" />
+    <Content Include="Views\Checkout\Create.cshtml" />
+    <Content Include="Views\Checkout\Delete.cshtml" />
+    <Content Include="Views\Checkout\Details.cshtml" />
+    <Content Include="Views\Checkout\Edit.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\Checkout\UnAuthorized.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
