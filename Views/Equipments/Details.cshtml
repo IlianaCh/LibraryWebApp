@@ -1,0 +1,106 @@
+﻿@model LibraryWebApp.Models.equipment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>equipment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.equip_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equip_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equip_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equip_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equip_director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equip_director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equip_genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equip_genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equip_length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equip_length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_checkout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_checkout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_return)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_return)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records1.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records1.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records2.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records2.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records3.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records3.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records4.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records4.transaction_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.equip_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

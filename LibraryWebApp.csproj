@@ -129,8 +129,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AudiosController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\EquipmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,6 +239,21 @@
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Audios\Create.cshtml" />
+    <Content Include="Views\Audios\Delete.cshtml" />
+    <Content Include="Views\Audios\Details.cshtml" />
+    <Content Include="Views\Audios\Edit.cshtml" />
+    <Content Include="Views\Audios\Index.cshtml" />
+    <Content Include="Views\Equipments\Create.cshtml" />
+    <Content Include="Views\Equipments\Delete.cshtml" />
+    <Content Include="Views\Equipments\Details.cshtml" />
+    <Content Include="Views\Equipments\Edit.cshtml" />
+    <Content Include="Views\Equipments\Index.cshtml" />
+    <Content Include="Views\Movies\Create.cshtml" />
+    <Content Include="Views\Movies\Delete.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Movies\Edit.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

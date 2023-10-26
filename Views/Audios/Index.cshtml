@@ -1,0 +1,81 @@
+﻿@model IEnumerable<LibraryWebApp.Models.audio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.audio_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.audio_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.audio_author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.audio_publisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.audio_genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.audio_length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_checkout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_return)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_records.transaction_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio_author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio_publisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio_genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.audio_length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_checkout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_return)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkout_records.transaction_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.audio_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.audio_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.audio_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LibraryWebApp.Models.movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_checkout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_return)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_records1.transaction_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_director)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_checkout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_return)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkout_records1.transaction_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.movie_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.movie_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.movie_id })
+        </td>
+    </tr>
+}
+
+</table>
