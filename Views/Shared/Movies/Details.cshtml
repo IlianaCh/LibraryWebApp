@@ -1,0 +1,82 @@
+﻿@model LibraryWebApp.Models.movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_checkout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_checkout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_return)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_return)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records1.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records1.transaction_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.movie_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

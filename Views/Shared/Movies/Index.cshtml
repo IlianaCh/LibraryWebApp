@@ -33,11 +33,8 @@
             @Html.DisplayNameFor(model => model.last_return)
         </th>
         <th>
-            @if (User.IsInRole("Library Admin") || User.IsInRole("Library Staff"))
-            {
-                @Html.DisplayNameFor(model => model.checkout_records1.transaction_id)
-            }
-            </th>
+            @Html.DisplayNameFor(model => model.checkout_records1.transaction_id)
+        </th>
         <th></th>
     </tr>
 
@@ -68,13 +65,9 @@
             @Html.DisplayFor(modelItem => item.checkout_records1.transaction_id)
         </td>
         <td>
-            @if (User.IsInRole("Library Admin") || User.IsInRole("Library Staff"))
-            {
-                @Html.ActionLink("Edit", "Edit", new { id = item.movie_id })
-                @Html.ActionLink("Delete", "Delete", new { id = item.movie_id })
-            }
-            @Html.ActionLink("Details", "Details", new { id = item.movie_id })
-
+            @Html.ActionLink("Edit", "Edit", new { id=item.movie_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.movie_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.movie_id })
         </td>
     </tr>
 }

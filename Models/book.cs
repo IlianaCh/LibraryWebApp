@@ -21,6 +21,8 @@ namespace LibraryWebApp.Models
             this.waitlists = new HashSet<waitlist>();
             this.waitlists1 = new HashSet<waitlist>();
         }
+
+
     
         public int book_id { get; set; }
         public string book_type { get; set; }
@@ -32,7 +34,8 @@ namespace LibraryWebApp.Models
         public Nullable<System.DateTime> last_checkout { get; set; }
         public Nullable<System.DateTime> last_return { get; set; }
         public Nullable<int> last_transaction { get; set; }
-    
+
+       
         public virtual checkout_records checkout_records { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<checkout_records> checkout_records1 { get; set; }
