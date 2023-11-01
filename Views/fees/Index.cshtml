@@ -1,0 +1,71 @@
+﻿@model IEnumerable<LibraryWebApp.Models.fee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Fees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.create_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remaining_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_paid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_records.transaction_id)
+        </th>
+        
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.create_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.remaining_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_paid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.checkout_records.transaction_id)
+        </td>
+       
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.user.username)
+        </td>
+       
+        
+      
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.fee_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.fee_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.fee_id })
+        </td>
+    </tr>
+}
+
+</table>

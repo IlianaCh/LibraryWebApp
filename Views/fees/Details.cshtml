@@ -1,0 +1,114 @@
+﻿@model LibraryWebApp.Models.fee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>fee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.create_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.create_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.remaining_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.remaining_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_paid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_paid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records1.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records1.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records2.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records2.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.checkout_records3.transaction_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.checkout_records3.transaction_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user1.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user1.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user2.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user2.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user3.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user3.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.fee_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

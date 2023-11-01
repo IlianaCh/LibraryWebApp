@@ -134,6 +134,7 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\EquipmentsController.cs" />
+    <Compile Include="Controllers\feesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -267,6 +268,11 @@
     <Content Include="Views\Checkout\Edit.cshtml" />
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\Checkout\UnAuthorized.cshtml" />
+    <Content Include="Views\fees\Create.cshtml" />
+    <Content Include="Views\fees\Delete.cshtml" />
+    <Content Include="Views\fees\Details.cshtml" />
+    <Content Include="Views\fees\Edit.cshtml" />
+    <Content Include="Views\fees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
