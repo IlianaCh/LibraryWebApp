@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Library Application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Library", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -25,11 +25,14 @@
                     <li>@Html.ActionLink("Audio", "Index", "Audios")</li>
                     <li>@Html.ActionLink("Equipment", "Index", "Equipments")</li>
                     <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
-                    <li>@Html.ActionLink("Checkout", "Index", "Checkout")</li>
-                    <li>@Html.ActionLink("fees", "Index", "fees")</li>
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                </ul>
+                    @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
+                    {
+                        <li>@Html.ActionLink("Checkout", "Index", "Checkout")</li>
+                        <li>@Html.ActionLink("Fees", "Index", "fees")</li>
+                    }
+                        @*<li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -38,7 +41,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Iliana Chevez</p>
+            @*<p>&copy; @DateTime.Now.Year - Iliana Chevez</p>*@
         </footer>
     </div>
 

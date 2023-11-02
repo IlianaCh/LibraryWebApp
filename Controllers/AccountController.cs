@@ -31,6 +31,7 @@ namespace WebApplication1.Controllers
                     {
                         Session["UserName"] = user.username;
                         Session["UserId"] = user.user_id;
+                        Session["Role"] = user.user_role;
                         return RedirectToAction("Index", "Home");
                     }
                     else

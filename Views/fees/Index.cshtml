@@ -61,9 +61,12 @@
         
       
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.fee_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.fee_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.fee_id })
+            @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
+            {
+                @Html.ActionLink("Edit ", "Edit", new { id = item.fee_id })
+                @Html.ActionLink("Delete ", "Delete", new { id = item.fee_id })
+            }
+            @Html.ActionLink("Details", "Details", new { id = item.fee_id })
         </td>
     </tr>
 }

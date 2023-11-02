@@ -6,15 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using LibraryWebApp.Infrastructure;
 using LibraryWebApp.Models;
 
 namespace WebApplication1.Controllers
 {
+    [CustomAuthenticationFilter]
     public class feesController : Controller
     {
         private LibraryDBEntities db = new LibraryDBEntities();
 
         // GET: fees
+        [CustomAuthorize("Library Admin", "Library Staff")]
         public ActionResult Index()
         {
             var fees = db.fees.Include(f => f.checkout_records).Include(f => f.checkout_records1).Include(f => f.checkout_records2).Include(f => f.checkout_records3).Include(f => f.user).Include(f => f.user1).Include(f => f.user2).Include(f => f.user3);
