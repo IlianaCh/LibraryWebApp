@@ -214,6 +214,7 @@
     <Content Include="Models\LibraryModel.edmx.diagram">
       <DependentUpon>LibraryModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\LibraryWebAppCOSC3380 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
