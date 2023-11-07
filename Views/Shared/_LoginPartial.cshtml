@@ -4,8 +4,8 @@
     {
         @Html.AntiForgeryToken()
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Welcome : @Session["UserName"]</a></li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            <li style="display:inline-block"><a href="#">Welcome : @Session["UserName"]</a></li>
+            <li style="display:inline-block"><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
         </ul>
     }
 }
