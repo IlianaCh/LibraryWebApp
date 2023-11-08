@@ -7,7 +7,8 @@
 <h2>Fees</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create", null, new { @class = "underline" })*@
+    <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
 </p>
 <table class="table">
     <tr>
@@ -36,7 +37,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="table_row">
         <td>
             @Html.DisplayFor(modelItem => item.create_date)
         </td>
@@ -63,10 +64,13 @@
         <td>
             @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
             {
-                @Html.ActionLink("Edit ", "Edit", new { id = item.fee_id })
-                @Html.ActionLink("Delete ", "Delete", new { id = item.fee_id })
+                @*  @Html.ActionLink("Edit ", "Edit", new { id = item.fee_id }, new { @class = "underline" }) *@
+                <a href="@Url.Action("Edit", new { id = item.fee_id })" class="button-link-edit">Edit</a>
+                @*  @Html.ActionLink("Delete ", "Delete", new { id = item.fee_id }, new { @class = "underline" }) *@
+                <a href="@Url.Action("Delete", new { id = item.fee_id })" class="button-link-delete">Delete</a>
             }
-            @Html.ActionLink("Details", "Details", new { id = item.fee_id })
+            @* @Html.ActionLink("Details", "Details", new { id = item.fee_id }, new { @class = "underlinezz" }) *@
+            <a href="@Url.Action("Details", new { id = item.fee_id })" class="button-link-detail">Detail</a>
         </td>
     </tr>
 }

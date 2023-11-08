@@ -255,3 +255,59 @@ input.btn-submit {
     padding: 15px 0;
     margin-top: 20px;
 }
+
+
+/*Working on the table */
+
+.table {
+    background-color: #B2C8BA;
+    border-radius: 15px;
+    height: 742px;
+    overflow: hidden;
+    position: relative;
+    width: 1290px;
+}
+.button-link-delete {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #8B0000;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.button-link-detail {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #6699CC;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.button-link-edit{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #67786D;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.button-link-create {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #67786D;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+.table_row {
+    background-color: #fffaf0;
+    border-radius: 25px;
+
+}
+
+.underline:hover {
+    text-decoration: underline; 
+}

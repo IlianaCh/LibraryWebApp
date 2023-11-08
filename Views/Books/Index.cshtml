@@ -4,10 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Books</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create", null, new { @class = "underline" })*@
+    <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
 </p>
 <table class="table">
     <tr>
@@ -38,8 +39,8 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
+    <tr class="table_row">
+        <td >
             @Html.DisplayFor(modelItem => item.book_type)
         </td>
         <td>
@@ -66,10 +67,13 @@
         <td>
             @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
             {
-                @Html.ActionLink("Edit ", "Edit", new { id = item.book_id })
-                @Html.ActionLink("Delete ", "Delete", new { id = item.book_id })
+                <a href="@Url.Action("Edit", new { id = item.book_id })" class="button-link-edit">Edit</a>
+                @*  @Html.ActionLink("Edit ", "Edit", new { id = item.book_id }, new { @class = "underline" }) *@
+                <a href="@Url.Action("Delete", new { id = item.book_id })" class="button-link-delete">Delete</a>
+                @*   @Html.ActionLink("Delete ", "Delete", new { id = item.book_id }, new { @class = "underline" })*@
             }
-            @Html.ActionLink("Details", "Details", new { id = item.book_id })
+            <a href="@Url.Action("Details", new { id = item.book_id })" class="button-link-detail">Details</a>
+            @*   @Html.ActionLink("Details", "Details", new { id = item.book_id }, new { @class = "underline" })*@
         </td>
     </tr>
 }

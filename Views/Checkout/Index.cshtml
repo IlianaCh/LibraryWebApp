@@ -4,10 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Checkout</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+  @* @Html.ActionLink("Create New", "Create", null, new { @class = "underline" }) *@
+    <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
 </p>
 <table class="table">
     <tr>
@@ -16,7 +17,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.return_date)
-        </th>
+        </th> 
         <th>
             @Html.DisplayNameFor(model => model.due_date)
         </th>
@@ -42,7 +43,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="table_row">
         <td>
             @Html.DisplayFor(modelItem => item.create_date)
         </td>
@@ -71,9 +72,11 @@
             @Html.DisplayFor(modelItem => item.user.username)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.transaction_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.transaction_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.transaction_id })
+
+            <a href="@Url.Action("Edit", new { id = item.transaction_id })" class="button-link-edit">Edit</a>
+          @* @Html.ActionLink("Edit", "Edit", new { id = item.transaction_id }, new { @class = "underline" }) *@|
+            @Html.ActionLink("Details", "Details", new { id = item.transaction_id }, new { @class = "underline" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.transaction_id }, new { @class = "underline" })
         </td>
     </tr>
 }
