@@ -13,12 +13,12 @@
     justify-content: center;
 }
 
-.navbar{
+.navbar {
     position: relative;
     width: 100%;
     min-height: 65px;
     background: #C8DBBE;
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -48,13 +48,14 @@
     margin-right: auto;
     margin-left: auto;
 }
+
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
 }
 
 @media (min-width: 768px) {
-    .navbar{
+    .navbar {
         border-radius: 4px;
     }
 }
@@ -77,6 +78,7 @@
     font-weight: 700;
     font-size: 20px;
 }
+
 .nav {
     padding-left: 0;
     margin-bottom: 0;
@@ -113,7 +115,6 @@ a:hover, a:focus {
 
 a:visited {
     text-decoration: underline;
-
 }
 
 a:active, a:hover {
@@ -144,14 +145,15 @@ a:active, a:hover {
         height: 2px;
         border-radius: 1px;
     }
+
 .navbar-nav {
     margin: 7.5px -15px;
 }
 
-.navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 20px;
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
     }
 
 @media (min-width: 768px) {
@@ -166,13 +168,13 @@ a:active, a:hover {
     display: block;
 }
 
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
 @media (min-width: 768px) {
     .navbar-right {
@@ -181,8 +183,8 @@ a:active, a:hover {
     }
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -195,7 +197,7 @@ a{
     background-color: transparent;
 }
 
-.Logo{
+.Logo {
     float: left !important;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -267,6 +269,7 @@ input.btn-submit {
     position: relative;
     width: 1290px;
 }
+
 .button-link-delete {
     display: inline-block;
     padding: 5px 10px;
@@ -276,6 +279,7 @@ input.btn-submit {
     text-align: center;
     cursor: pointer;
 }
+
 .button-link-detail {
     display: inline-block;
     padding: 5px 10px;
@@ -285,7 +289,8 @@ input.btn-submit {
     text-align: center;
     cursor: pointer;
 }
-.button-link-edit{
+
+.button-link-edit {
     display: inline-block;
     padding: 5px 10px;
     background-color: #67786D;
@@ -294,6 +299,7 @@ input.btn-submit {
     text-align: center;
     cursor: pointer;
 }
+
 .button-link-create {
     display: inline-block;
     padding: 10px 20px;
@@ -302,12 +308,64 @@ input.btn-submit {
     border-radius: 5px;
     text-align: center;
 }
+
 .table_row {
     background-color: #fffaf0;
     border-radius: 25px;
-
 }
 
 .underline:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
+}
+
+.create_head {
+    width: 256px;
+    height: 55px;
+    flex-shrink: 0;
+    color: #5A5041;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.create_background {
+    border-radius: 24px;
+    background: #FFFAF1;
+    mix-blend-mode: darken;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+    width: 260px;
+    height: 580px;
+}
+
+.create_title {
+    width: 260px;
+    height: 46px;
+    flex-shrink: 0;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 2;
+    background: #E0EBDA;
+    text-align: center;
+    border-radius: 24px 24px 0px 0px;
+    text-align: center;
+    color: #665A48;
+    margin-bottom: 15px;
+}
+
+.create_menu {
+    color: #665A48;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 26px;
+    margin-left: 50px;
+}
+
+.create_goback {
+    color: #665A48;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
 }
