@@ -11,8 +11,7 @@ namespace LibraryWebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class user
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -28,20 +27,16 @@ namespace LibraryWebApp.Models
             this.waitlists2 = new HashSet<waitlist>();
             this.waitlists3 = new HashSet<waitlist>();
         }
-
-        [Display(Name = "User Id")]
+    
         public int user_id { get; set; }
         public Nullable<int> user_role { get; set; }
-
-        [Display(Name = "User Name")]
         public string username { get; set; }
         public string email { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
         public Nullable<bool> is_active { get; set; }
-
-        [Display(Name = "Password")]
         public string password { get; set; }
+        public Nullable<bool> checkout_allowed { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<checkout_records> checkout_records { get; set; }

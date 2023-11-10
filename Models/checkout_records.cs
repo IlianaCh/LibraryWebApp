@@ -65,5 +65,6 @@ namespace LibraryWebApp.Models
         public virtual ICollection<fee> fees3 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<movie> movies { get; set; }
+        public virtual objects objects { get; set; }
     }
 }

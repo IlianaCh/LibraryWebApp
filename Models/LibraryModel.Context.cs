@@ -34,5 +34,7 @@ namespace LibraryWebApp.Models
         public virtual DbSet<user_role> user_role { get; set; }
         public virtual DbSet<user> users { get; set; }
         public virtual DbSet<waitlist> waitlists { get; set; }
+        public virtual DbSet<objects> objects { get; set; }
+        public virtual DbSet<objects_type> objects_type { get; set; }
     }
 }

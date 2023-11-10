@@ -26,13 +26,14 @@
                     <li style="display:inline-block">@Html.ActionLink("Audio", "Index", "Audios")</li>
                     <li style="display:inline-block">@Html.ActionLink("Equipment", "Index", "Equipments")</li>
                     <li style="display:inline-block">@Html.ActionLink("Movies", "Index", "Movies")</li>
+                    <li style="display:inline-block">@Html.ActionLink("Objects", "Index", "Objects")</li>
                     @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
                     {
                         <li style="display:inline-block">@Html.ActionLink("Checkout", "Index", "Checkout")</li>
                         <li style="display:inline-block">@Html.ActionLink("Fees", "Index", "fees")</li>
                     }
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
