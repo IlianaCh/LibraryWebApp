@@ -25,6 +25,7 @@ namespace LibraryWebApp.Models
     
         public int role_id { get; set; }
         public string role_desc { get; set; }
+        public Nullable<int> checkout_days { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<user> users { get; set; }

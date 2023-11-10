@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LibraryWebApp.Models.objects>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Object</h2>
+<div>
+    <button class="filter-button" data-filter="type1">Audio</button>
+    <button class="filter-button" data-filter="type2">Books</button>
+    <button class="filter-button" data-filter="type2">Movies</button>
+</div>
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.object_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_medium)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objects_type.type_desc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_medium)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objects_type.type_desc)
+        </td>
+        <td>
+            @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
+            {
+                @*@Html.ActionLink("Edit ", "Edit", new { id = item.movie_id }, new { @class = "underline" })*@
+                <a href="@Url.Action("Edit", new { id = item.object_id })" class="button-link-edit">Edit</a>
+                @*  @Html.ActionLink("Delete ", "Delete", new { id = item.movie_id }, new { @class = "underline" }) *@
+                <a href="@Url.Action("Delete", new { id = item.object_id })" class="button-link-delete">Delete</a>
+            }
+            @*   @Html.ActionLink("Details", "Details", new { id = item.movie_id }, new { @class = "underline" }) *@
+            <a href="@Url.Action("Details", new { id = item.object_id })" class="button-link-detail">Details</a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -49,6 +49,10 @@
         <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__5E8A0973" ManuallyRouted="false" />
         <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__5F7E2DAC" ManuallyRouted="false" />
         <AssociationConnector Association="libappdevModel.FK__waitlist__user_i__607251E5" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="libappdevModel.objects" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="libappdevModel.objects_type" Width="1.5" PointX="0.75" PointY="1.5" />
+        <AssociationConnector Association="libappdevModel.FK_checkout_records_object_id" />
+        <AssociationConnector Association="libappdevModel.FK_object_object_type" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

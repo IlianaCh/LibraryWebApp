@@ -1,0 +1,67 @@
+﻿@model LibraryWebApp.Models.objects
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>objects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.object_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.object_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.object_author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.object_author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.object_medium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.object_medium)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.object_genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.object_genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.object_length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.object_length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objects_type.type_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objects_type.type_desc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.object_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
