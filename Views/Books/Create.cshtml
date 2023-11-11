@@ -4,18 +4,17 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2 class="create_head">Create</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>book</h4>
-        <hr />
+    <div class="create_background">
+        <h4 class="create_title">book</h4>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.book_type, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.book_type, new { htmlAttributes = new { @class = "form-control" } })
@@ -23,7 +22,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.book_title, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.book_title, new { htmlAttributes = new { @class = "form-control" } })
@@ -31,7 +30,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.book_author, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.book_author, new { htmlAttributes = new { @class = "form-control" } })
@@ -39,7 +38,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.book_publisher, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.book_publisher, new { htmlAttributes = new { @class = "form-control" } })
@@ -47,7 +46,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.book_genre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.book_genre, new { htmlAttributes = new { @class = "form-control" } })
@@ -55,7 +54,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.book_length, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.book_length, new { htmlAttributes = new { @class = "form-control" } })
@@ -63,7 +62,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.last_checkout, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.last_checkout, new { htmlAttributes = new { @class = "form-control" } })
@@ -71,7 +70,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.last_return, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.last_return, new { htmlAttributes = new { @class = "form-control" } })
@@ -79,7 +78,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             @Html.LabelFor(model => model.last_transaction, "last_transaction", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("last_transaction", null, htmlAttributes: new { @class = "form-control" })
@@ -87,7 +86,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="create_menu">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
@@ -96,7 +95,10 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Back to List", "Books/Index")">
+        <img style="vertical-align:middle" src="~/Content/rectangle.png" width="50" height="40"  alt="Back to List" />
+        <span style="vertical-align:middle" class="create_goback">Back to List</span>
+</a>
 </div>
 
 @section Scripts {
