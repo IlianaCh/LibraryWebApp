@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
         // GET: Checkout
         public ActionResult Index()
         {
-            var checkout_records = db.checkout_records.Include(c => c.audio).Include(c => c.book).Include(c => c.movie).Include(c => c.equipment).Include(c => c.user);
+            var checkout_records = db.checkout_records.Include(c => c.objects).Include(c => c.user);
             return View(checkout_records.ToList());
         }
 
@@ -42,10 +42,11 @@ namespace WebApplication1.Controllers
         // GET: Checkout/Create
         public ActionResult Create()
         {
-            ViewBag.object_id = new SelectList(db.audios, "audio_id", "audio_type");
+            ViewBag.object_id = new SelectList(db.objects, "object_id", "object_title");
+            /*ViewBag.object_id = new SelectList(db.audios, "audio_id", "audio_type");
             ViewBag.object_id = new SelectList(db.books, "book_id", "book_type");
             ViewBag.object_id = new SelectList(db.movies, "movie_id", "movie_type");
-            ViewBag.object_id = new SelectList(db.equipments, "equip_id", "equip_type");
+            ViewBag.object_id = new SelectList(db.equipments, "equip_id", "equip_type");*/
             ViewBag.user_id = new SelectList(db.users, "user_id", "username");
             return View();
         }
