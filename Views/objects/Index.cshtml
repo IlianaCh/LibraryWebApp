@@ -5,7 +5,7 @@
 
 }
 
-<h2>Object</h2>
+<h2>Browsing</h2>
 <div>
     <button class="filter-button" data-filter="type1">Audio</button>
     <button class="filter-button" data-filter="type2">Books</button>
@@ -18,28 +18,28 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.object_title)
+            @Html.ActionLink("Title", "Index", new {sortOrder = ViewBag.TitleSortParm})
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.object_author)
+            Author
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.object_medium)
+            Medium
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.object_genre)
+            Genre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.object_length)
+            Length
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.objects_type.type_desc)
+            Type
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="table_row">
         <td>
             @Html.DisplayFor(modelItem => item.object_title)
         </td>

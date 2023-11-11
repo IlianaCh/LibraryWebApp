@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using LibraryWebApp.Models;
@@ -15,10 +16,27 @@ namespace LibraryWebApp.Controllers
         private LibraryDBEntities db = new LibraryDBEntities();
 
         // GET: objects
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            var objects = db.objects
-                .Include(o => o.objects_type);
+            ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : ""; 
+            ViewBag.AuthorSortParm = sortOrder == "Author" ? "author_desc" : "Author";
+            var objects = from o in db.objects
+                          select o;
+            switch(sortOrder)
+            {
+                case "title_desc":
+                    objects = objects.OrderByDescending(o => o.object_title);
+                    break;
+                case "Author":
+                    objects = objects.OrderBy(o => o.object_author);
+                    break;
+                case "author_desc":
+                    objects = objects.OrderByDescending(o => o.object_author);
+                    break;
+                default:
+                    objects = objects.OrderBy(o => o.object_title);
+                    break;
+            }
             return View(objects.ToList());
         }
 
