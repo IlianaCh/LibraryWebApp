@@ -136,6 +136,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\objectsController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,6 +181,7 @@
     <Compile Include="Models\objects_type.cs">
       <DependentUpon>LibraryModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Report.cs" />
     <Compile Include="Models\user.cs">
       <DependentUpon>LibraryModel.tt</DependentUpon>
     </Compile>
@@ -288,6 +290,10 @@
     <Content Include="Views\objects\Details.cshtml" />
     <Content Include="Views\objects\Edit.cshtml" />
     <Content Include="Views\objects\Index.cshtml" />
+    <Content Include="Views\Reports\Create.cshtml" />
+    <Content Include="Views\Reports\FeesAccumulated.cshtml" />
+    <Content Include="Views\Reports\MoviesPurchased.cshtml" />
+    <Content Include="Views\Reports\BooksPurchased.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

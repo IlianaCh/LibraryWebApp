@@ -1,0 +1,55 @@
+﻿@model IEnumerable<LibraryWebApp.Models.objects>
+
+@{
+    ViewBag.Title = "Books Purchased Report";
+}
+
+<h2>BooksPurchased</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.object_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_medium)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.object_length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objects_type.type_desc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_medium)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objects_type.type_desc)
+        </td>
+    </tr>
+}
+
+</table>
