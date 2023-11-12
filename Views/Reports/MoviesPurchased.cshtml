@@ -5,7 +5,9 @@
 }
 
 <h2>Movies Purchased Report</h2>
-
+@{ 
+    int totalMovies = 0;
+}
 <table class="table">
     <tr>
         <th>
@@ -33,6 +35,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.object_title)
+            @{
+                totalMovies++;
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.object_author)
@@ -53,3 +58,4 @@
 }
 
 </table>
+<p>Total number of movies purchased @totalMovies</p>
