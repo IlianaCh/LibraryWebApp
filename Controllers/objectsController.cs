@@ -16,12 +16,17 @@ namespace LibraryWebApp.Controllers
         private LibraryDBEntities db = new LibraryDBEntities();
 
         // GET: objects
-        public ActionResult Index(string sortOrder)
+        public ViewResult Index(string sortOrder, string searchString)
         {
             ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : ""; 
             ViewBag.AuthorSortParm = sortOrder == "Author" ? "author_desc" : "Author";
             var objects = from o in db.objects
                           select o;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                objects = objects.Where(o => o.object_title.Contains(searchString));
+            }
             switch(sortOrder)
             {
                 case "title_desc":

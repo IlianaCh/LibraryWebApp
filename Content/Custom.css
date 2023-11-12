@@ -258,7 +258,6 @@ input.btn-submit {
     margin-top: 20px;
 }
 
-
 /*Working on the table */
 .title-container {
     text-align: center;
@@ -275,7 +274,7 @@ input.btn-submit {
 .table {
     background-color: #B2C8BA;
     border-radius: 15px;
-    height: 742px;
+    height: auto;
     overflow: hidden;
     position: relative;
     width: 1290px;

@@ -5,6 +5,9 @@
 }
 
 <h2>Fees Accumulated Report</h2>
+@{ 
+    decimal totalSum = 0;
+}
 
 <table class="table">
     <tr>
@@ -37,6 +40,10 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.total_fee)
+                @{
+                    totalSum += (decimal)item.total_fee;
+                }
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.remaining_fee)
@@ -54,3 +61,5 @@
     }
 
 </table>
+
+<p>Sum of the total fees: $@totalSum.ToString("N2")</p>

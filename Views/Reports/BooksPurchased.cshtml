@@ -5,6 +5,10 @@
 }
 
 <h2>Books Purchased Report</h2>
+@{ 
+
+    int totalBooks = 0;
+}
 
 <table class="table">
     <tr>
@@ -29,27 +33,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr class="table_row">
-        <td>
-            @Html.DisplayFor(modelItem => item.object_title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.object_author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.object_medium)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.object_genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.object_length)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.objects_type.type_desc)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.object_title)
+                @{ 
+                    totalBooks++;
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.object_author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.object_medium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.object_genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.object_length)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.objects_type.type_desc)
+            </td>
+        </tr>
+    }
 
 </table>
+<p>Total Books Purchased @totalBooks</p>
