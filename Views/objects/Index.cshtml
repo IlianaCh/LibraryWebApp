@@ -5,16 +5,22 @@
 
 }
 
-<h2>Browsing</h2>
-<div>
-    <button class="filter-button" data-filter="type1">Audio</button>
-    <button class="filter-button" data-filter="type2">Books</button>
-    <button class="filter-button" data-filter="type2">Movies</button>
-</div>
+<h2>Browse Catalog</h2>
 <p>
     @*@Html.ActionLink("Create New", "Create")*@
     <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
 </p>
+
+@using (Html.BeginForm())
+ {
+     <p class="form-login-input">
+         Find by Title: @Html.TextBox("SearchString")
+         <input type="submit" value="Search" />
+     </p>
+ }
+          
+
+
 <table class="table">
     <tr>
         <th>
