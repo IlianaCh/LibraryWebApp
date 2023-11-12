@@ -12,29 +12,43 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.create_date)
+            Fee ID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.total_fee)
+            @*@Html.DisplayNameFor(model => model.checkout_records.transaction_id)*@
+            Transaction ID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.remaining_fee)
+            @*@Html.DisplayNameFor(model => model.create_date)*@
+            Create Date
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.is_paid)
+            @*@Html.DisplayNameFor(model => model.total_fee)*@
+            Total Fee
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.checkout_records.transaction_id)
+            @*@Html.DisplayNameFor(model => model.remaining_fee)*@
+            Remaining Fee
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.user.username)
+            @*@Html.DisplayNameFor(model => model.is_paid)*@
+            Paid Off
         </th>
-        <th></th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.user.username)*@
+            Username
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr class="table_row">
+            <td>
+                @Html.DisplayFor(modelItem => item.fee_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.checkout_records.transaction_id)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.create_date)
             </td>
@@ -43,16 +57,12 @@
                 @{
                     totalSum += (decimal)item.total_fee;
                 }
-
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.remaining_fee)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.is_paid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.checkout_records.transaction_id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.user.username)
