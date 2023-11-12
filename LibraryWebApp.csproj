@@ -137,6 +137,7 @@
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\objectsController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\WaitlistController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -294,6 +295,9 @@
     <Content Include="Views\Reports\FeesAccumulated.cshtml" />
     <Content Include="Views\Reports\MoviesPurchased.cshtml" />
     <Content Include="Views\Reports\BooksPurchased.cshtml" />
+    <Content Include="Views\Waitlist\Index.cshtml" />
+    <Content Include="Views\Waitlist\Create.cshtml" />
+    <Content Include="Views\Waitlist\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -260,6 +260,17 @@ input.btn-submit {
 
 
 /*Working on the table */
+.title-container {
+    text-align: center;
+}
+
+.title {
+    display: inline-block;
+    background-color: #B2C8BA;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 .table {
     background-color: #B2C8BA;
