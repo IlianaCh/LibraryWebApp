@@ -1,0 +1,65 @@
+﻿@model IEnumerable<LibraryWebApp.Models.fee>
+
+@{
+    ViewBag.Title = "FeesAccumulatedReport";
+}
+
+<h2>Fees Accumulated Report</h2>
+@{ 
+    decimal totalSum = 0;
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.create_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remaining_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_paid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.checkout_records.transaction_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="table_row">
+            <td>
+                @Html.DisplayFor(modelItem => item.create_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_fee)
+                @{
+                    totalSum += (decimal)item.total_fee;
+                }
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remaining_fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.checkout_records.transaction_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.username)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>Sum of the total fees: $@totalSum.ToString("N2")</p>

@@ -17,7 +17,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.return_date)
-        </th> 
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.due_date)
         </th>
@@ -25,16 +25,10 @@
             @Html.DisplayNameFor(model => model.is_late)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.audio.audio_type)
+            @Html.DisplayNameFor(model => model.objects.object_title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.book.book_type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.movie.movie_type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.equipment.equip_type)
+            @Html.DisplayNameFor(model => model.objects.object_medium)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.user.username)
@@ -57,16 +51,10 @@
             @Html.DisplayFor(modelItem => item.is_late)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.audio.audio_type)
+            @Html.DisplayFor(modelItem => item.objects.object_title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.book.book_type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.movie.movie_type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.equipment.equip_type)
+            @Html.DisplayFor(model => item.objects.object_medium)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.user.username)
@@ -74,7 +62,7 @@
         <td>
 
             <a href="@Url.Action("Edit", new { id = item.transaction_id })" class="button-link-edit">Edit</a>
-          @* @Html.ActionLink("Edit", "Edit", new { id = item.transaction_id }, new { @class = "underline" }) *@|
+            @* @Html.ActionLink("Edit", "Edit", new { id = item.transaction_id }, new { @class = "underline" }) *@|
             @Html.ActionLink("Details", "Details", new { id = item.transaction_id }, new { @class = "underline" }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.transaction_id }, new { @class = "underline" })
         </td>

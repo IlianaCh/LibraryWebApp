@@ -368,3 +368,10 @@ input.btn-submit {
     font-size: 20px;
     font-style: normal;
 }
+
+
+/*Grey out checkout create date so we can send in date as now*/
+.form-control[readonly] {
+    background-color: #f8f8f8; 
+    cursor: not-allowed; 
+}
