@@ -53,6 +53,7 @@ namespace WebApplication1.Controllers
         {
             Session["UserName"] = string.Empty;
             Session["UserId"] = string.Empty;
+            Session["Role"] = string.Empty;
             return RedirectToAction("Index", "Home");
         }
     }

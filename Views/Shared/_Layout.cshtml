@@ -22,7 +22,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li style="display:inline-block">@Html.ActionLink("Browse Catalog", "Index", "Objects")</li>
+                    @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2") || (Session["Role"]?.ToString() == "3"))
+                    {
+                        <li style="display:inline-block">@Html.ActionLink("Browse Catalog", "Index", "Objects")</li>
+                    }
                     @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
                     {
                         <li style="display:inline-block">@Html.ActionLink("Checkout", "Index", "Checkout")</li>
