@@ -298,6 +298,7 @@
     <Content Include="Views\Waitlist\Index.cshtml" />
     <Content Include="Views\Waitlist\Create.cshtml" />
     <Content Include="Views\Waitlist\Delete.cshtml" />
+    <Content Include="Views\Checkout\Return.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
