@@ -1,0 +1,57 @@
+﻿@model IEnumerable<LibraryWebApp.Models.checkout_records>
+
+@{
+    ViewBag.Title = "Return";
+}
+
+<h2>Return</h2>
+
+@using (Html.BeginForm())
+{
+    <p class="form-login-input">
+        Find by Username: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objects.object_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_late)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="table_row">
+            <td>
+                @Html.DisplayFor(modelItem => item.user.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.objects.object_title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_late)
+            </td>
+            <td>
+                <a href="@Url.Action("ReturnButton", new { id = item.transaction_id })" class="button-link-edit">Confirm Return</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

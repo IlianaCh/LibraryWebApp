@@ -42,6 +42,10 @@ namespace LibraryWebApp.Controllers
         public ActionResult MoviesPurchased(DateTime? startDate, DateTime? endDate)
         {
             var objects = db.objects.Where(x => x.objects_type.type_desc == "Movie");
+            if (startDate == null && endDate == null)
+            {
+                objects = objects.Where(x => x.checkout_records.Any());
+            }
             if (startDate != null)
             {
                 objects = objects.Where(x => x.checkout_records.Any(y => y.create_date >= startDate));
@@ -56,6 +60,10 @@ namespace LibraryWebApp.Controllers
         public ActionResult BooksPurchased(DateTime? startDate, DateTime? endDate)
         {
             var objects = db.objects.Where(x => x.objects_type.type_desc == "Book");
+            if (startDate == null && endDate == null)
+            {
+                objects = objects.Where(x => x.checkout_records.Any());
+            }
             if (startDate != null)
             {
                 objects = objects.Where(x => x.checkout_records.Any(y => y.create_date >= startDate));

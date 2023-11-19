@@ -1,11 +1,12 @@
 ﻿@model IEnumerable<LibraryWebApp.Models.objects>
 
+
 @{
     ViewBag.Title = "BooksPurchasedReport";
 }
 
-<h2>Books Purchased Report</h2>
-@{ 
+<h2>Books Checked-Out Report</h2>
+@{
 
     int totalBooks = 0;
 }
@@ -13,9 +14,26 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.object_title)
+            Transaction ID
         </th>
         <th>
+            Transaction Date
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.object_id)*@
+            Book ID
+        </th>
+        <th>
+            @* @Html.DisplayNameFor(model => model.object_title)*@
+            Book Title
+        </th>
+        <th>
+            Due Date
+        </th>
+        <th>
+            Returned Date
+        </th>
+        @*<th>
             @Html.DisplayNameFor(model => model.object_author)
         </th>
         <th>
@@ -30,35 +48,53 @@
         <th>
             @Html.DisplayNameFor(model => model.objects_type.type_desc)
         </th>
-        <th></th>
+        <th></th>*@
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.object_title)
-                @{ 
-                    totalBooks++;
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.object_author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.object_medium)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.object_genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.object_length)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.objects_type.type_desc)
-            </td>
-        </tr>
-    }
+        foreach (var record in item.checkout_records.OrderByDescending(x => x.transaction_id))
+        {
+            <tr class="table_row">
+                <td>
+                    @Html.DisplayFor(modelItem => record.transaction_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => record.create_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.object_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.object_title)
+                    @{
+                        totalBooks++;
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => record.due_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => record.return_date)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.object_author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_medium)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.object_length)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objects_type.type_desc)
+        </td>*@
+            </tr>
+        }
+     }
 
 </table>
-<p>Total Books Purchased @totalBooks</p>
+<p>Total Books Checked-Out: @totalBooks</p>

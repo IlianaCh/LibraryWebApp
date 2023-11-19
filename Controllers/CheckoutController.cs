@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using LibraryWebApp.Infrastructure;
 using LibraryWebApp.Models;
+using Microsoft.Ajax.Utilities;
 
 namespace WebApplication1.Controllers
 {
@@ -73,6 +74,46 @@ namespace WebApplication1.Controllers
             return View(checkout_records);
         }
 
+        // GET: Checkout/Return
+        public ActionResult Return(string searchString)
+        {
+            var objects = from o in db.checkout_records
+                          select o;
+            objects = objects.Where(o => o.return_date.Equals(null));
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                objects = objects.Where(o => o.user.username.Contains(searchString));
+            }
+            return View(objects.ToList());
+        }
+
+        //Modify return date and goes back to index
+        public ActionResult ReturnButton(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            checkout_records checkout_records = db.checkout_records.Find(id);
+            if (checkout_records == null)
+            {
+                return HttpNotFound();
+            }
+            checkout_records.return_date = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                db.Entry(checkout_records).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(checkout_records);
+            }
+        }
+
+
         // GET: Checkout/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -92,6 +133,7 @@ namespace WebApplication1.Controllers
             ViewBag.user_id = new SelectList(db.users, "user_id", "username", checkout_records.user_id);
             return View(checkout_records);
         }
+
 
         // POST: Checkout/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
