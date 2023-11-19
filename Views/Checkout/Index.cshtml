@@ -62,9 +62,11 @@
         <td>
 
             <a href="@Url.Action("Edit", new { id = item.transaction_id })" class="button-link-edit">Edit</a>
-            @* @Html.ActionLink("Edit", "Edit", new { id = item.transaction_id }, new { @class = "underline" }) *@|
-            @Html.ActionLink("Details", "Details", new { id = item.transaction_id }, new { @class = "underline" }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.transaction_id }, new { @class = "underline" })
+            @* @Html.ActionLink("Edit", "Edit", new { id = item.transaction_id }, new { @class = "underline" }) |
+        @Html.ActionLink("Details", "Details", new { id = item.transaction_id }, new { @class = "underline" }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.transaction_id }, new { @class = "underline" })*@
+            <a href="@Url.Action("Details", new { id = item.transaction_id })" class="button-link-detail">Detail</a>
+            <a href="@Url.Action("Delete", new { id = item.transaction_id })" class="button-link-delete">Delete</a>
         </td>
     </tr>
 }

@@ -6,10 +6,14 @@
 }
 
 <h2>Browse Catalog</h2>
+
 <p>
-    @*@Html.ActionLink("Create New", "Create")*@
-    <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
-</p>
+    @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
+    {
+        @*@Html.ActionLink("Create New", "Create")*@
+        <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
+    }
+    </p>
 
 @using (Html.BeginForm())
  {
