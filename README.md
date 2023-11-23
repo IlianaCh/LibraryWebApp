@@ -12,6 +12,14 @@ Student, Faculty, Staff, Admin
 
 ## Reports
 
+Reports are accessed via admin login (user: admin password: pass) 
+
+View Total Books Purchased: A cumulative view of data pulled from the checkout records table, and the books table. This will display all necessary information on the checkout of the book and the data of the book itself. Along with that you can view the exact total of the books purchased at the bottom within the date range that you set manually.
+
+View Total Fees Accumulated: A cumulative view of data pulled from the checkout records, fees, and users tables respectively. This will display all necessary information on the fees, the date it was created and the user it is attached to. Along with that you can view the summation of the fees that have been accumulated within the date range you set manually.
+
+View Total Movies Purchased: A cumulative view of data pulled from the checkout records table, and the movies table. This will display all necessary information on the checkout of the movies and the data of the book itself. Along with that you can view the exact total of the movies purchased at the bottom within the date range that you set manually.
+
 ## Running the App
 
 ## Authors
