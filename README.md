@@ -1,5 +1,7 @@
 ## Project Description
-[Library Web App](https://librarywebappcosc3380.azurewebsites.net)
+App Link:[Library Web App](https://librarywebappcosc3380.azurewebsites.net)
+
+The library lends books, audio, and movies. These items can be loaned to students, faculty, and library staff. These items all have similar attributes but also have distinguishable attributes.The database will store students and faculty’s userID, email, first and last name and total fees due. It will also store information about the different items (such as Title, Author, Publisher, Equipment description, etc.). The database will keep track of the checkout record for every user for limit tracking purposes, amount of times items have been borrowed, and whether the user has reached the limit of amount owed. All relationships will run through this checkout record as it is an efficient way to store who purchased what and the fees they've accumulated or paid off.
 
 ## File Description
 Data Entry Form:
