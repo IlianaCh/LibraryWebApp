@@ -2,6 +2,16 @@
 [Library Web App](https://librarywebappcosc3380.azurewebsites.net)
 
 ## File Description
+Data Entry Form:
+The admin and staff have the ability to modify the database, they can edit the Browse Catalog, Checkout, and Fees Pages. On the Browse Catalog page, the users can change objects, object_type, object_title, object_author, object_medium, object_genre, and object_length. On the fee pages user_id, transaction_id, create_date, total_fee, remaining_fee, is_paid. On the Checkout Record, they can modify the username, the checkout date and the item being checked out.
+
+Create
+When the user submits the form, the controller receives the data. A new instance of the SqlCommand class is created with an SQL INSERT query, and the user-provided data is used to populate the query.
+Modify
+The Edit action retrieves the existing object from the database, modifies its properties, and then uses db.Entry(objects).State = EntityState.Modified to mark it as modified. The changes are then saved to the Azure SQL Database using db.SaveChanges().
+Delete
+When a user initiates a delete action, the controller receives a request to delete a particular record.
+
 
 
 ## User Roles
