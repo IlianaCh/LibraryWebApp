@@ -17,8 +17,9 @@ namespace WebApplication1.Controllers
     {
         private LibraryDBEntities db = new LibraryDBEntities();
 
-        [CustomAuthorize("Library Admin", "Library Staff")]
+
         // GET: Checkout
+        [CustomAuthorize("Library Admin", "Library Staff")]
         public ActionResult Index()
         {
             var checkout_records = db.checkout_records.Include(c => c.objects).Include(c => c.user);

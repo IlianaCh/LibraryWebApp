@@ -7,9 +7,12 @@
 <h2>Fees</h2>
 
 <p>
-    @*@Html.ActionLink("Create New", "Create", null, new { @class = "underline" })*@
-    <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
-</p>
+    @if ((Session["Role"]?.ToString() == "1") || (Session["Role"]?.ToString() == "2"))
+    {
+        @*@Html.ActionLink("Create New", "Create", null, new { @class = "underline" })*@
+        <a href="@Url.Action("Create")" class="button-link-create">Create New</a>
+    }
+    </p>
 <table class="table">
     <tr>
         <th>
