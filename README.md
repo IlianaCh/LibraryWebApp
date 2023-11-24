@@ -22,6 +22,15 @@ Student, Faculty, Staff, Admin
 
 ## Triggers
 
+Calculate Due Date by Role: 
+Trigger will add the allotted days to the checkout day by the following roles Library Staff - 180 Days, Faculty - 28 Days, Student - 14 Days. Logic is applied to the Checkout Records table. Use DateAdd() function to add days from role plus create date only AFTER an INSERT action.
+
+Find If Returned Late:
+Trigger will flag when an item is returned late. Logic is applied to the Checkout Records table. Using DateDiff() function to calculate if the result of Return Date and Due Date is greater than zero. If so, then it will update the is_late field equal to 1 indicating the item is late. Trigger happens after INSERT or UPDATE to the Return Date. 
+
+Calculate Fee:
+Trigger is monitoring when item is late then calculate fee by using the difference in Due Date and Return Date. This builds off of the last late flag trigger. When is_late has UPDATE action, calculate the difference in dates then multiply the difference in days by the "Fee per Day" which we established as $0.25.
+
 ## Reports
 
 Reports are accessed via admin login (user: admin password: pass) 
