@@ -1,7 +1,32 @@
+ # ![🦆 icon _book_book-logo](https://github.com/IlianaCh/LibraryWebApp/assets/102560336/651e4f8f-547e-49ad-8a18-9f4dac4720c0) LibraryEDU
 ## Project Description
-App Link:[Library Web App](https://librarywebappcosc3380.azurewebsites.net)
+App Link: [Library Web App](https://librarywebappcosc3380.azurewebsites.net)
 
 The library lends books, audio, and movies. These items can be loaned to students, faculty, and library staff. These items all have similar attributes but also have distinguishable attributes.The database will store students and faculty’s userID, email, first and last name and total fees due. It will also store information about the different items (such as Title, Author, Publisher, Equipment description, etc.). The database will keep track of the checkout record for every user for limit tracking purposes, amount of times items have been borrowed, and whether the user has reached the limit of amount owed. All relationships will run through this checkout record as it is an efficient way to store who purchased what and the fees they've accumulated or paid off.
+
+## File Description
+For our project, we used Azure SQL Server for our database, ASP.NET MVC for our Web Application Framework and Azure App Service to deploy our application.
+
+![image](https://github.com/IlianaCh/LibraryWebApp/assets/102560336/26d73900-68fa-4e10-ad11-b09fd6b04354)
+
+
+
+Database in Azure SQL:
+
+- Our database backup file can be accessed via `sql dump file/libappdev-2023-11-25-14-57.bacpac`
+  
+ASP.NET MVC:
+* Our application has an MVC architectural pattern which means seperates the app into three main components, Model, View, and Controller:
+  - **Model**: It is responsible for managing the application's state and interacting with the database. It can be accessed via `Models`.
+  - **View**: Represents the user interface (UI) and is responsible for displaying data to the user. It receives input from the user and forwards it to the controller for processing. Can be accessed via `Views`.
+    * The shared layouts such as the navbar and login format are located in `./Views/Shared`
+    * The Browse Catalog cshtml and CRUD functionalities are located within  `./Views/objects`
+    * The Checkouts cshtml,  CRUD, and Return functionalities can be accessed via `./Views/Checkout`
+    * The Fees cshtml and CRUD functionalitites are located in `./Views/fees`
+    * The cshtml files for the Reports are can be accessed at `./Views/Reports 
+  - **Controller**: Acts as an intermediary between the Model and the View. It receives user input from the View, processes it using the Model, and updates the View with the results. The Controller is responsible for handling user requests, managing the flow of data, and updating the Model and View accordingly. Can be accessed via `Controllers`.
+
+* All of our css and images are located in `Contents`
 
 ## Project Documentation
 
@@ -9,11 +34,13 @@ The library lends books, audio, and movies. These items can be loaned to student
 Data Entry Form:
 The admin and staff have the ability to modify the database, they can edit the Browse Catalog, Checkout, and Fees Pages. On the Browse Catalog page, the users can change objects, object_type, object_title, object_author, object_medium, object_genre, and object_length. On the fee pages user_id, transaction_id, create_date, total_fee, remaining_fee, is_paid. On the Checkout Record, they can modify the username, the checkout date and the item being checked out.
 
-Create
+#### Create
 When the user submits the form, the controller receives the data. A new instance of the SqlCommand class is created with an SQL INSERT query, and the user-provided data is used to populate the query.
-Modify
+
+#### Modify
 The Edit action retrieves the existing object from the database, modifies its properties, and then uses db.Entry(objects).State = EntityState.Modified to mark it as modified. The changes are then saved to the Azure SQL Database using db.SaveChanges().
-Delete
+
+#### Delete
 When a user initiates a delete action, the controller receives a request to delete a particular record.
 
 
