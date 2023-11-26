@@ -20,7 +20,14 @@ When a user initiates a delete action, the controller receives a request to dele
 
 ### User Roles
 
-Student, Faculty, Staff, Admin
+Student, Faculty, Staff, and Admin
+
+[Login Information](login_credentials.txt)
+
+- Student Functionalities: student can login and browse through the library catalog to see the items available for books, movies, and audios
+- Faculty Functionalities: fuculty can login and browse through the library catalog to see the items available for books, movies, and audios. They also have a different amount of days of which an item is due.
+- Library Staff Functionalities: Staff is able to login, Checkout & Return items for student and faculty, view fees and create new ones. They are also able to generate reports.
+- Admin Functionalities: Admin is able to login, Checkout & Return items for student and faculty, they are also able to create and view fees. They are also able to generate reports.
 
 ### Triggers
 
@@ -43,7 +50,6 @@ Trigger is monitoring when item is late then calculate fee by using the differen
 
 - View Total Movies Purchased: A cumulative view of data pulled from the checkout records table, and the movies table. This will display all necessary information on the checkout of the movies and the data of the book itself. Along with that you can view the exact total of the movies purchased at the bottom within the date range that you set manually.
 
-## Running the App
 
 ## Authors
 - Iliana Chevez - [ilianaCh](https://github.com/IlianaCh)
