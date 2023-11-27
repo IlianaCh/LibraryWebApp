@@ -23,7 +23,7 @@ ASP.NET MVC:
     * The Browse Catalog cshtml and CRUD functionalities are located within  `./Views/objects`
     * The Checkouts cshtml,  CRUD, and Return functionalities can be accessed via `./Views/Checkout`
     * The Fees cshtml and CRUD functionalitites are located in `./Views/fees`
-    * The cshtml files for the Reports are can be accessed at `./Views/Reports 
+    * The cshtml files for the Reports are can be accessed at `./Views/Reports`
   - **Controller**: Acts as an intermediary between the Model and the View. It receives user input from the View, processes it using the Model, and updates the View with the results. The Controller is responsible for handling user requests, managing the flow of data, and updating the Model and View accordingly. Can be accessed via `Controllers`.
 
 * All of our css and images are located in `Contents`
@@ -77,6 +77,14 @@ Trigger is monitoring when item is late then calculate fee by using the differen
 
 - View Total Movies Purchased: A cumulative view of data pulled from the checkout records table, and the movies table. This will display all necessary information on the checkout of the movies and the data of the book itself. Along with that you can view the exact total of the movies purchased at the bottom within the date range that you set manually.
 
+## Running the App
+1. **Install .NET SDK:**
+   * Ensure that you have the .NET SDK installed on your machine.
+2. **Install Visual Studio 2022**
+3. **Clone the repository using either Visual Studio 2022**
+4. **In Visual Studio 2022, click "File -> Open -> Project Solution"**
+5. **Navigate to the cloned project folder and open file "LibraryWebApp.sln"**
+6. **Start Project**
 
 ## Authors
 - Iliana Chevez - [ilianaCh](https://github.com/IlianaCh)
